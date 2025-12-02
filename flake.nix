@@ -28,7 +28,7 @@
 
           shellHook = ''
             echo "Python Shell 🐍"
-            export UV_PYTHON=${pkgs.python314}
+            export UV_PYTHON=${pkgs.python313}
             export ZSH_SYNTAX_HIGHLIGHTING=${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting
             export ZSH_AUTOSUGGESTIONS=${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions
             if [ ! "$SHELL" = "$(command -v zsh)" ]; then
@@ -37,7 +37,7 @@
               exec zsh
             fi
 
-            if [ ! -f "/path/to/file" ]; then
+            if [ ! -f "./.venv" ]; then
               uv venv
             fi
           
